@@ -13,6 +13,8 @@ namespace StackQueueDemo
             queueClass.Enqueue(70);
             ///Displaying Queue elements
             queueClass.Display();
+            queueClass.DeQueueAll();
+            queueClass.Display();
            
            
         }

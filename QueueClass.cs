@@ -33,16 +33,45 @@ namespace StackQueueDemo
             Console.WriteLine("inserted into list " + new_node.data);
         }
         /// <summary>
+        /// Dequeue element from queue
+        /// </summary>
+        public void Dequeue()
+        {
+            // If queue is empty returns NULL.  
+            if (this.head == null)
+            {
+                Console.WriteLine("The Queue is empty");
+                return;
+            }
+
+            // Store previous head and move head pointer one step ahead to delete the current element 
+            Node<T> temp = this.head;
+            this.head = this.head.next;
+
+            Console.WriteLine("\nItem deleted is {0}", temp.data);
+        }
+        /// <summary>
+        /// Removes all elements
+        /// </summary>
+        public void DeQueueAll()
+        {
+            ///Removes all elements till queue is null
+            while (head != null)
+                Dequeue();
+        }
+        /// <summary>
         /// Displays Whole queue
         /// </summary>
         public void Display()
         {
             Node<T> temp = this.head;
+            ///If head is null then queue is empty
             if (temp == null)
             {
                 Console.WriteLine("queue is empty");
                 return;
             }
+            ///If head is not null then it displays whole queue
             else
             {
                 while (temp != null)
