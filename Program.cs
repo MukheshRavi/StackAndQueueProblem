@@ -13,6 +13,9 @@ namespace StackQueueDemo
             stackClass.Push(56);
             ///Displaying stack
             stackClass.Display();
+            ///Pops all elements
+            stackClass.PopAll();
+            stackClass.Display();
            
         }
     }
